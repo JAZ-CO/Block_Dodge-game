@@ -2,6 +2,7 @@
     width: 800px;
     height: 500px;
     border: 2px solid black;
+    position: relative;
     
 }
 #player{
@@ -24,6 +25,7 @@
     top: 10px;
     left: 700px;
     animation: blueMove 2s infinite linear;
+    
 }
 
 #redWall{
@@ -55,5 +57,12 @@
     position: fixed;
     
     left: 760px;
+    top: 220px
     
+}
+#gameOverBorder{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
