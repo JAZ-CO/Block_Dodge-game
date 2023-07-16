@@ -2,8 +2,8 @@ let player = document.getElementById("player");
 let obstacles = document.getElementsByClassName("obstacles");
 let game = document.getElementById("game");
 let wall = document.getElementById("wall");
-
-
+let score = document.getElementById("score");
+let scoreCount = 0;
 // function for the obstacles location
 function obstacleVerticalChangeFunc(){
     for(let i =0; i< obstacles.length; i++){
@@ -48,10 +48,16 @@ function checkCollisionFunc(){
     }
 }
 
-let obstacleVerticalChange = setInterval(obstacleVerticalChangeFunc,2000)
+function scoreFunc(){
+    scoreCount++;
+    score.innerHTML = "Score: " + scoreCount;
+}
 
-let checkCollision = setInterval(checkCollisionFunc,227)
+let obstacleVerticalChange;
 
+let checkCollision;
+
+let scoreInterval;
 
 
 

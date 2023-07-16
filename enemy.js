@@ -49,5 +49,5 @@ enemyMove = setInterval(function(){
 },20)
 }
 
-enemyInterval= setTimeout(enemyFunc,1000)
+// enemyInterval= setTimeout(enemyFunc,1000)
 

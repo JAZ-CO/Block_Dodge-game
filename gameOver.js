@@ -10,6 +10,14 @@ let overLabel = document.createElement("p");
 
 overLabel.innerHTML = "GAMEOVER";
 
+let scores = [];
+let players = [new User("Dummy",200),new User("Not",30)];
+
+let leaderBoard= "Leaderboard: <br>";
+
+let leaderBoardHTML = document.createElement("p");
+
+
 function gameOverFunc(){
     {
         if(parseInt(getComputedStyle(player).left) <= 10){
@@ -21,11 +29,66 @@ function gameOverFunc(){
             clearInterval(obstacleVerticalChange);
             clearInterval(checkCollision);
             clearInterval(gameOverInterval);
-            
+            clearInterval(scoreInterval);
+
             bullet.bulletHTML.style.animation = "none";
             obstacles[0].style.left = getComputedStyle(obstacles[0]).left;
     
             obstacles[0].style.animation = "none";
+            //
+            // scores.push(scoreCount);
+            // scores.sort();
+
+            
+
+
+            // below is user scores leaderboard
+            let playerExists = false;
+
+            for(let i = 0; i< players.length;i++){
+                if(players[i].name === userNameInput.value){
+                    console.log("old name")
+                    playerExists = true;
+                    
+                    if(scoreCount > players[i].score){
+                        players[i].score = scoreCount;
+                    }
+                }
+            }
+            if(!playerExists){
+                console.log("new name")
+                players.push(new User(userNameInput.value,scoreCount))
+            }
+            playerExists = false;
+
+            for(let i = 0; i < players.length;i++){
+
+                for(let j = 0; j< players.length; j++){
+
+                    if(players[i].score > players[j].score){
+                        let temp = players[i];
+                        players[i] = players[j];
+                        players[j] = temp;
+                        i--
+                        break;
+                    }
+                }
+            }
+            // test scores leaderboard
+            for(let i = 0; i< players.length; i++){
+                console.log(players[i].name);
+            }
+
+            for(let i = 0 ; i < players.length;i++){
+                leaderBoard +=  (i+ 1) + "- " + players[i].name + ": " + players[i].score + "<br>";
+            }
+            leaderBoardHTML.innerHTML = leaderBoard;
+            gameOverBorder.appendChild(leaderBoardHTML);
+
+            //
+            //
+            
+            
         }
     
     }
@@ -60,9 +123,11 @@ overBtn.onclick = function(){
 
     gameOverInterval = setInterval(gameOverFunc,1);
 
+    scoreCount = 0;
+    scoreInterval = setInterval(scoreFunc,300);
 
-
-
+    gameOverBorder.removeChild(leaderBoardHTML);
+    leaderBoard= "Leaderboard: <br>";
 
     
 }

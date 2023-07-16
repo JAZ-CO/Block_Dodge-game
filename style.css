@@ -24,7 +24,7 @@
     position: fixed;
     top: 10px;
     left: 700px;
-    animation: blueMove 2s infinite linear;
+    /* animation: blueMove 2s infinite linear; */
     
 }
 
@@ -46,7 +46,7 @@
     height: 5px;
     background-color: darkgoldenrod;
     position: fixed;
-    animation: bulletMovement 1.5s linear;
+    /* animation: bulletMovement 1.5s linear; */
     
 }
 
@@ -60,9 +60,18 @@
     top: 220px
     
 }
+#intro{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 #gameOverBorder{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+#score{
+    direction: rtl;
 }
