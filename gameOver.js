@@ -35,29 +35,30 @@ function gameOverFunc(){
             obstacles[0].style.left = getComputedStyle(obstacles[0]).left;
     
             obstacles[0].style.animation = "none";
-            //
-            // scores.push(scoreCount);
-            // scores.sort();
-
-            
 
 
             // below is user scores leaderboard
             let playerExists = false;
+            players = JSON.parse(localStorage.getItem("PlayerList"));
 
             for(let i = 0; i< players.length;i++){
                 if(players[i].name === userNameInput.value){
                     console.log("old name")
+                    console.log(players);
                     playerExists = true;
                     
                     if(scoreCount > players[i].score){
                         players[i].score = scoreCount;
+                        localStorage.setItem("PlayerList",JSON.stringify(players));
                     }
                 }
             }
             if(!playerExists){
                 console.log("new name")
+                
                 players.push(new User(userNameInput.value,scoreCount))
+                localStorage.setItem("PlayerList",JSON.stringify(players));
+                console.log(players);
             }
             playerExists = false;
 
