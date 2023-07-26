@@ -1,4 +1,3 @@
-let gameOver = false;
 let gameOverBorder = document.getElementById("gameOverBorder");
 
 let overBtn = document.createElement("input");
@@ -22,7 +21,6 @@ function gameOverFunc(){
     {
         if(parseInt(getComputedStyle(player).left) <= 10){
            
-            gameOver = true;
             gameOverBorder.appendChild(overLabel);
             gameOverBorder.appendChild(overBtn);
             clearInterval(enemyMove);
@@ -98,7 +96,6 @@ function gameOverFunc(){
 let gameOverInterval = setInterval(gameOverFunc,1)
 
 overBtn.onclick = function(){
-    gameOver = false;
 
     gameOverBorder.removeChild(overLabel);
     gameOverBorder.removeChild(overBtn);
