@@ -8,11 +8,11 @@ let scoreCount = 0;
 function obstacleVerticalChangeFunc(){
     for(let i =0; i< obstacles.length; i++){
         if((Math.random() *100) > 50){
-            obstacles[i].style.top = 10 + "px";
+            obstacles[i].style.top = -113 + "px";
     
         }
         else{
-            obstacles[i].style.top = 250 + "px";
+            obstacles[i].style.top = 129 + "px";
         }
         
     }
