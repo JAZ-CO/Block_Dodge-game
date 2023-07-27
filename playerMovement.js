@@ -7,7 +7,7 @@ document.addEventListener("keydown", function(event){
         }
     }
     else if(event.code === "ArrowDown"){
-        if(getComputedStyle(player).top <="380px" ){
+        if(parseInt(getComputedStyle(player).top) <=380 ){
         let newTop = parseInt(getComputedStyle(player).top)+10;
         player.style.top = newTop + "px"
         }

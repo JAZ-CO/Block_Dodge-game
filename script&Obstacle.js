@@ -28,16 +28,16 @@ function checkCollisionFunc(){
     
     if(chracterLeft +50 - blockCollision >=0 &&
         chracterLeft +50 <= blockCollision + 100){
-        if(blockTop === 10){
-            if(chracterTop < 270){
+        if(blockTop === -113){
+            if(chracterTop < 237){
                 
                 let newPlayerLeft =  parseInt( window.getComputedStyle(player).getPropertyValue("left")) -10;
                 player.style.left = newPlayerLeft + "px";
             }
 
         }
-        else if (blockTop === 250){
-            if(chracterTop > 150){
+        else if (blockTop === 129){
+            if(chracterTop > 130){
                
                 let newPlayerLeft =  parseInt( getComputedStyle(player).left) -10;
                 player.style.left = newPlayerLeft + "px";
