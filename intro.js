@@ -37,10 +37,15 @@ startBtn.onclick = function(){
     obstacles[0].style.animation = "blueMove 2s infinite linear";
 
     bullet.bulletHTML.style.animation = "bulletMovement 1.5s linear";
+    
+    
     }
     else{
         alert("User name not entered!");
     }
 
+        player.style.animation ="playerBlinking 1.5s forwards";
+        setTimeout(function(){player.style.animation ="none";},1500)
+        
 
 }

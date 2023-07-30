@@ -5,6 +5,15 @@
     position: relative;
     
 }
+@keyframes playerBlinking {
+    0%{opacity: 0;}
+    20%{opacity: 1;}
+    40%{opacity: 0;}
+    60%{opacity: 1;}
+    80%{opacity: 0;}
+    100%{opacity: 1;}
+    
+}
 #player{
     width: 50px;
     height: 93px;
@@ -12,6 +21,8 @@
     position:relative;
     top: 200px;
     left: 150px;
+    
+    /* animation: playerBlinking 1s forwards; */
 }
 @keyframes blueMove {
     0%{left: 720px;}
@@ -35,7 +46,7 @@
     background-color: red;
     position: relative;
     left: -6px;
-    bottom: 378px;
+    bottom: 371px;
 }
 @keyframes bulletMovement {
     

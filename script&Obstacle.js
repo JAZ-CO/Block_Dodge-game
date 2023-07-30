@@ -43,6 +43,9 @@ function checkCollisionFunc(){
                 
                 let newPlayerLeft =  parseInt( window.getComputedStyle(player).getPropertyValue("left")) -10;
                 player.style.left = newPlayerLeft + "px";
+                
+                player.style.animation ="playerBlinking 1.5s forwards";
+                setTimeout(function(){player.style.animation ="none";},1500)
             }
 
         }
@@ -51,6 +54,9 @@ function checkCollisionFunc(){
                
                 let newPlayerLeft =  parseInt( getComputedStyle(player).left) -10;
                 player.style.left = newPlayerLeft + "px";
+
+                player.style.animation ="playerBlinking 1.5s forwards";
+                setTimeout(function(){player.style.animation ="none";},1500)
             }
         }
         
