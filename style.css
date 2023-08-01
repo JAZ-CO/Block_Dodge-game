@@ -5,6 +5,11 @@
     position: relative;
     
 }
+input[type="text"]{
+    border: 1px;
+    font-family: Arial sans-serif;
+    padding: 5px;
+}
 @keyframes playerBlinking {
     0%{opacity: 0;}
     20%{opacity: 1;}

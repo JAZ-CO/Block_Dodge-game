@@ -6,6 +6,7 @@ let gameIntroId = document.getElementById("intro")
 let userNameInput = document.createElement("input");
 userNameInput.setAttribute("type","text");
 userNameInput.setAttribute("placeholder","Enter your name:");
+userNameInput.setAttribute("style","caret-color: cyan;");
 
 let startBtn = document.createElement("input");
 startBtn.setAttribute("type","button");
@@ -15,6 +16,7 @@ startBtn.setAttribute("value","Start!");
 let introLabel = document.createElement("p");
 
 introLabel.innerHTML = "Block Dodge";
+introLabel.setAttribute("style","font-family: 'Bungee Spice', cursive;")
 
 gameIntroId.appendChild(introLabel);
 gameIntroId.appendChild(userNameInput);
