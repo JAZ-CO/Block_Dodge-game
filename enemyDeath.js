@@ -21,14 +21,9 @@ setInterval(function(){
         if((bulletTop - enemyTop) >= 0 && (bulletBottom - enemyBottom >=0)){
             console.log("enemy removed!")
             
-            wall.removeChild(enemy);
-            
-            
+            wall.removeChild(enemy);       
         }
     }
 
-
     }
-
-
 },1)

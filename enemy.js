@@ -32,7 +32,7 @@ enemyMove = setInterval(function(){
     enemy.style.top = ((parseInt(getComputedStyle(wall).width) + 90)/2 * Math.abs(Math.sin(fluctuation))) + "px";
     enemy.style.left = (parseInt(getComputedStyle(enemy).left) -1.2) + "px";
 
-// the difference was supposed to be 50 & 100 but it makes it detect even if its outside so I change it manually until I feel like it fits     
+// the difference was supposed to be 50 & 100 but it makes it detect even if its outside so I change it manually until it fits     
 
     if(Math.abs(parseInt(window.getComputedStyle(enemy).left) -parseInt(window.getComputedStyle(player).left)) < 30){
         if(Math.abs(parseInt(window.getComputedStyle(enemy).top) -parseInt(window.getComputedStyle(player).top)) < 85){
@@ -48,6 +48,4 @@ enemyMove = setInterval(function(){
     
 },20)
 }
-
-// enemyInterval= setTimeout(enemyFunc,1000)
 

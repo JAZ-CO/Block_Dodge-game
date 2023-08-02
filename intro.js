@@ -5,9 +5,15 @@ let gameIntroId = document.getElementById("intro")
 
 let userNameInput = document.createElement("input");
 userNameInput.setAttribute("type","text");
-userNameInput.setAttribute("placeholder","Enter your name:");
+userNameInput.setAttribute("placeholder","Enter your name...");
 userNameInput.setAttribute("style","caret-color: cyan;");
 
+userNameInput.addEventListener("keyup", e=>{
+    e.preventDefault();
+    if(e.keyCode === 13){
+        startBtn.click();
+    }
+})
 let startBtn = document.createElement("input");
 startBtn.setAttribute("type","button");
 startBtn.setAttribute("id","startBtn");
@@ -21,6 +27,7 @@ introLabel.setAttribute("style","font-family: 'Bungee Spice', cursive;")
 gameIntroId.appendChild(introLabel);
 gameIntroId.appendChild(userNameInput);
 gameIntroId.appendChild(startBtn);
+
 
 startBtn.onclick = function(){
     if(userNameInput.value){
