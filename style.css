@@ -103,3 +103,12 @@ input[type="text"]{
     }
     
 }
+#fullBtn{
+    margin: 20px;
+    padding: 20px;
+    border: none;
+    background-color: #fe0067;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+}

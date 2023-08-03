@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,6 +24,7 @@
             
         
         </div>
+        <button id="fullBtn"> Go Fullscreen</button>
     
     </div>
     
@@ -35,5 +36,48 @@
     <script src="bullet.js"></script>
     <script src="enemyDeath.js"></script>
     <script src="gameOver.js"></script>
+    <script>
+        let myDocument = document.documentElement;
+        let fullBtn = document.getElementById("fullBtn");
+
+        fullBtn.addEventListener("click", ()=>{
+
+            if(fullBtn.textContent ==="Go Fullscreen"){
+
+                if(myDocument.requestFullscreen){
+                    myDocument.requestFullscreen();
+                }
+                else if(myDocument.msRequestFullscreen)
+                {
+                    myDocument.msRequestFullscreen();
+                }
+                else if(myDocument.mozRequestFullscreen){
+                    myDocument.mozRequestFullscreen();
+                }
+                else if(myDocument.webkitRequestFullscreen){
+                    myDocument.webkitRequestFullscreen();
+                }
+
+                fullBtn.textContent = "Exit Fullscreen";
+            }
+            else{
+                if(document.exitFullscreen){
+                    document.exitFullscreen();
+                }
+                else if(document.msexitFullscreen)
+                {
+                    document.msexitFullscreen();
+                }
+                else if(document.mozexitFullscreen){
+                    document.mozexitFullscreen();
+                }
+                else if(document.webkitexitFullscreen){
+                    document.webkitexitFullscreen();
+                }
+
+                fullBtn.textContent = "Go Fullscreen";
+            }
+        })
+    </script>
 </body>
 </html>
