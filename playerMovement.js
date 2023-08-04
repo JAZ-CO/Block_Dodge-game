@@ -1,4 +1,6 @@
 
+
+
 document.addEventListener("keydown", function(event){
     if(event.code === "ArrowUp"){
         if(parseInt(getComputedStyle(player).top) >=-10 ){
