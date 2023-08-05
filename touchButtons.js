@@ -50,7 +50,6 @@ function stopDownTimer() {
   clearInterval(timerdownInterval);
 }
 
-
 // Event listener for button  Down
 downButton.addEventListener('mousedown', startDownTimer);
 downButton.addEventListener('mouseup', stopDownTimer);
