@@ -54,3 +54,8 @@ function stopDownTimer() {
 downButton.addEventListener('mousedown', startDownTimer);
 downButton.addEventListener('mouseup', stopDownTimer);
 downButton.addEventListener('mouseleave', stopDownTimer);
+
+// Shoot button
+let shootBtn = document.getElementById("shootButton");
+
+
