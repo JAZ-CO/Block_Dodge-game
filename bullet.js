@@ -32,6 +32,9 @@ document.addEventListener("keydown", function(event){
 
             bullet.bulletHTML.style.top = bullet.y + "px";
             wall.appendChild(bullet.bulletHTML);
+
+            // audio for later
+            new Audio().play();
             
         setTimeout(function(){
             if(wall.contains(bullet.bulletHTML)){
