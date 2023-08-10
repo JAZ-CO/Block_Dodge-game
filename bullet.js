@@ -16,8 +16,6 @@ class Bullet{
 
         
     }
-    
-    
 
 }
 let bullet = new Bullet();
