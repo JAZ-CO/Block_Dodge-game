@@ -1,10 +1,11 @@
 let enemy = document.createElement("div");
 enemy.setAttribute("id","enemy");
 
+// these are two funtions that runs in interval of time
 let enemyInterval;
 let enemyMove;
 
-
+// Function to spawn the enemy at the start
 function enemyFunc(){
     
     
