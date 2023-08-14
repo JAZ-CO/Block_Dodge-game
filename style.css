@@ -68,10 +68,15 @@ input[type="text"]{
     
 }
 
+@keyframes enemyGlowing {
+    0%{background-color: purple;}
+    50%{background-color: rgb(241, 132, 241);}
+    100%{background-color: purple;}
+}
 #enemy{
     width: 35px;
     height: 65px;
-    background-color: purple;
+    animation: enemyGlowing 2s infinite linear;
     position: fixed;
     
     left: 760px;
