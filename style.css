@@ -108,6 +108,16 @@ input[type="text"]{
     }
     
 }
+@media(prefers-color-scheme: dark){
+    body{
+        background-color: rgb(20, 19, 19);
+        color: #ffffff;
+    }
+    #player{
+        background-color: #ffffff;
+    }
+
+}
 #fullBtn{
     margin: 20px;
     padding: 20px;
