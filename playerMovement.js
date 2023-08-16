@@ -15,3 +15,13 @@ document.addEventListener("keydown", function(event){
         }
     }
 })
+
+// new Code for smoother movement
+// and be able to use WASD keys
+
+let ctx = player.getContext("2d");
+
+function updatePlayerMovement(){
+    ctx.fillRect(0,0,50,25);
+    requestAnimationFrame(updatePlayerMovement);
+}

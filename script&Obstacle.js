@@ -1,6 +1,6 @@
 
 // store elements needed in variables
-let player = document.getElementById("player");
+const player = document.getElementById("player");
 let obstacles = document.getElementsByClassName("obstacles");
 let game = document.getElementById("game");
 let wall = document.getElementById("wall");
