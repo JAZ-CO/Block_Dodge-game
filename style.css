@@ -19,16 +19,16 @@ input[type="text"]{
     100%{opacity: 1;}
     
 }
-/* #player{ */
-    /* width: 50px; */
-    /* height: 93px; */
-    /* background-color: black; */
-    /* position:relative;
+#player{
+    width: 50px;
+    height: 93px;
+    background-color: black;
+    position:relative;
     top: 200px;
-    left: 150px; */
+    left: 150px;
     
     /* animation: playerBlinking 1s forwards; */
-/* } */
+}
 @keyframes blueMove {
     0%{left: 720px;}
     100%{left: -200px;}
@@ -116,6 +116,7 @@ input[type="text"]{
     #player{
         background-color: #ffffff;
     }
+    
 
 }
 #fullBtn{
