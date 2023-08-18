@@ -14,10 +14,7 @@ userNameInput.addEventListener("keyup", e=>{
         startBtn.click();
     }
 })
-let startBtn = document.createElement("input");
-startBtn.setAttribute("type","button");
-startBtn.setAttribute("id","startBtn");
-startBtn.setAttribute("value","Start!");
+let startBtn = document.getElementById("startBtn");
 
 let introLabel = document.createElement("p");
 
@@ -26,6 +23,8 @@ introLabel.setAttribute("style","font-family: 'Bungee Spice', cursive;")
 
 gameIntroId.appendChild(introLabel);
 gameIntroId.appendChild(userNameInput);
+gameIntroId.appendChild(document.createElement("br"));
+
 gameIntroId.appendChild(startBtn);
 
 
