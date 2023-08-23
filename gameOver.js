@@ -7,7 +7,7 @@ overBtn.setAttribute("value","Replay!");
 
 let overLabel = document.createElement("p");
 
-overLabel.innerHTML = "GAMEOVER";
+overLabel.innerHTML = "GAMEOVER <br>";
 
 let scores = [];
 let players = [new User("Dummy",200),new User("Not",30)];
@@ -20,7 +20,7 @@ let leaderBoardHTML = document.createElement("p");
 function gameOverFunc(){
     {
         if(parseInt(getComputedStyle(player).left) <= 10){
-           
+            
             gameOverBorder.appendChild(overLabel);
             gameOverBorder.appendChild(overBtn);
             clearInterval(enemyMove);
@@ -41,8 +41,6 @@ function gameOverFunc(){
 
             for(let i = 0; i< players.length;i++){
                 if(players[i].name === userNameInput.value){
-                    console.log("old name")
-                    console.log(players);
                     playerExists = true;
                     
                     if(scoreCount > players[i].score){
@@ -83,11 +81,6 @@ function gameOverFunc(){
             }
             leaderBoardHTML.innerHTML = leaderBoard;
             gameOverBorder.appendChild(leaderBoardHTML);
-
-            //
-            //
-            
-            
         }
     
     }

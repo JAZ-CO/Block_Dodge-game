@@ -20,7 +20,7 @@ class Bullet{
 }
 let bullet = new Bullet();
 
-document.addEventListener("keydown", function(event){
+document.addEventListener("keypress", function(event){
     if(event.code === "Space" && !gameInIntro){
         console.log("bullet shoot");
             if(!bullet.shoot){
