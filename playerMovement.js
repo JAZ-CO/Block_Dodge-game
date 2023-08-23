@@ -34,6 +34,7 @@ function update(){
     ctx.fillRect(x,y,50,100);
     requestAnimationFrame(update);
 }
+
 update();
 
 // new movement script below with the above script
