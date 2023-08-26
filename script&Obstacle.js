@@ -77,9 +77,3 @@ let obstacleVerticalChange;
 let checkCollision;
 
 let scoreInterval;
-
-
-
-
-
-
