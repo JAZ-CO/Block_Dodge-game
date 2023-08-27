@@ -22,7 +22,7 @@
     <div id="game">
 
         <div id="wall">
-            
+
             <div id="player"></div>
             <div id="intro"> 
                 
@@ -36,13 +36,6 @@
             
         
         </div>
-
-        <button id="fullBtn"> Go Fullscreen</button>
-        <button id="UPButton">UP</button>
-        <button id="DownButton">DOWN</button>
-        <button id="shootButton">shoot</button>
-        
-    
     </div>
     
     <script src="intro.js"></script>
@@ -53,52 +46,5 @@
     <script src="bullet.js"></script>
     <script src="enemyDeath.js"></script>
     <script src="gameOver.js"></script>
-    <!-- <script src="touchButtons.js"></script> -->
-    <script>
-        // this is a script for full screen button
-        // this is mostly dummy and it's going to be removed later ;)
-        
-        let myDocument = document.documentElement;
-        let fullBtn = document.getElementById("fullBtn");
-
-        fullBtn.addEventListener("click", ()=>{
-
-            if(fullBtn.textContent ==="Go Fullscreen"){
-
-                if(myDocument.requestFullscreen){
-                    myDocument.requestFullscreen();
-                }
-                else if(myDocument.msRequestFullscreen)
-                {
-                    myDocument.msRequestFullscreen();
-                }
-                else if(myDocument.mozRequestFullscreen){
-                    myDocument.mozRequestFullscreen();
-                }
-                else if(myDocument.webkitRequestFullscreen){
-                    myDocument.webkitRequestFullscreen();
-                }
-
-                fullBtn.textContent = "Exit Fullscreen";
-            }
-            else{
-                if(document.exitFullscreen){
-                    document.exitFullscreen();
-                }
-                else if(document.msexitFullscreen)
-                {
-                    document.msexitFullscreen();
-                }
-                else if(document.mozexitFullscreen){
-                    document.mozexitFullscreen();
-                }
-                else if(document.webkitexitFullscreen){
-                    document.webkitexitFullscreen();
-                }
-
-                fullBtn.textContent = "Go Fullscreen";
-            }
-        })
-    </script>
 </body>
 </html>
