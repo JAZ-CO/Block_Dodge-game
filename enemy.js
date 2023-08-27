@@ -37,8 +37,7 @@ enemyMove = setInterval(function(){
 
     if(Math.abs(parseInt(window.getComputedStyle(enemy).left) -parseInt(window.getComputedStyle(player).left)) < 30){
         if(Math.abs(parseInt(window.getComputedStyle(enemy).top) -parseInt(window.getComputedStyle(player).top)) < 85){
-            let newPlayerLeft =  parseInt( window.getComputedStyle(player).getPropertyValue("left")) -0.5;
-            player.style.left = newPlayerLeft + "px";
+            vx = -1;
         }
     }
     if(parseInt(getComputedStyle(enemy).left) === -50){

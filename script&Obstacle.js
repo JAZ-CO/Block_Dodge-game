@@ -40,10 +40,7 @@ function checkCollisionFunc(){
         chracterLeft +50 <= blockCollision + 100){
         if(blockTop === -113){
             if(chracterTop < 237){
-                
-                let newPlayerLeft =  parseInt( window.getComputedStyle(player).getPropertyValue("left")) -10;
-                player.style.left = newPlayerLeft + "px";
-                
+                vx = -12;
                 // this is for damage animation by using css then removing at after the timeout
                 player.style.animation ="playerBlinking 1.5s forwards";
                 setTimeout(function(){player.style.animation ="none";},1500)
@@ -52,10 +49,7 @@ function checkCollisionFunc(){
         }
         else if (blockTop === 129){
             if(chracterTop > 130){
-               
-                let newPlayerLeft =  parseInt( getComputedStyle(player).left) -10;
-                player.style.left = newPlayerLeft + "px";
-                
+                vx = -12;
                 // this is for damage animation by using css then removing at after the timeout
                 player.style.animation ="playerBlinking 1.5s forwards";
                 setTimeout(function(){player.style.animation ="none";},1500)

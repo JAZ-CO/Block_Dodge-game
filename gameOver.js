@@ -7,12 +7,12 @@ overBtn.setAttribute("value","Replay!");
 
 let overLabel = document.createElement("p");
 
-overLabel.innerHTML = "GAMEOVER <br>";
+overLabel.innerHTML = "GAMEOVER";
 
 let scores = [];
 let players = [new User("Dummy",200),new User("Not",30)];
 
-let leaderBoard= "Leaderboard: <br>";
+let leaderBoard= "Leaderboard:";
 
 let leaderBoardHTML = document.createElement("p");
 
@@ -118,7 +118,7 @@ overBtn.onclick = function(){
     scoreInterval = setInterval(scoreFunc,300);
 
     gameOverBorder.removeChild(leaderBoardHTML);
-    leaderBoard= "Leaderboard: <br>";
+    leaderBoard= "Leaderboard:";
 
     
 }
