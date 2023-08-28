@@ -22,7 +22,7 @@ update();
 // new movement script below with the above script
 
 addEventListener("keydown",function(e){
-    console.log(e.code);
+    
     if(e.code === "KeyW"){
         vyu = -1;
 
@@ -31,9 +31,11 @@ addEventListener("keydown",function(e){
         vyd = 1;
 
     }
+
 })
+
 addEventListener("keyup",function(e){
-    console.log(e.code);
+    
     if(e.code === "KeyW"){
         vyu = 0;
 
