@@ -12,7 +12,7 @@ overLabel.innerHTML = "GAMEOVER";
 let scores = [];
 let players = [new User("Dummy",200),new User("Not",30)];
 
-let leaderBoard= "Leaderboard:";
+let leaderBoard= "Leaderboard: <br>";
 
 let leaderBoardHTML = document.createElement("p");
 
@@ -50,7 +50,6 @@ function gameOverFunc(){
                 }
             }
             if(!playerExists){
-                console.log("new name")
                 
                 players.push(new User(userNameInput.value,scoreCount))
                 localStorage.setItem("PlayerList",JSON.stringify(players));
@@ -96,8 +95,11 @@ overBtn.onclick = function(){
     //top: 200px;
     //left: 150px;
 
-    player.style.left = "150px";
-    player.style.top = "200px";
+    // player.style.left = "150px";
+    // player.style.top = "200px";
+
+    x = 150;
+    y = 200;
 
     obstacles[0].style.left = "700px";
     
@@ -118,7 +120,7 @@ overBtn.onclick = function(){
     scoreInterval = setInterval(scoreFunc,300);
 
     gameOverBorder.removeChild(leaderBoardHTML);
-    leaderBoard= "Leaderboard:";
+    leaderBoard= "Leaderboard: <br>";
 
     
 }

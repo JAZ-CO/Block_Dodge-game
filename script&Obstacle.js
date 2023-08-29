@@ -1,6 +1,6 @@
 
 // store elements needed in variables
-const player = document.getElementById("player");
+let player = document.getElementById("player");
 let obstacles = document.getElementsByClassName("obstacles");
 let game = document.getElementById("game");
 let wall = document.getElementById("wall");
@@ -40,7 +40,7 @@ function checkCollisionFunc(){
         chracterLeft +50 <= blockCollision + 100){
         if(blockTop === -113){
             if(chracterTop < 237){
-                vx = -12;
+                vx = -24;
                 // this is for damage animation by using css then removing at after the timeout
                 player.style.animation ="playerBlinking 1.5s forwards";
                 setTimeout(function(){player.style.animation ="none";},1500)
@@ -49,7 +49,7 @@ function checkCollisionFunc(){
         }
         else if (blockTop === 129){
             if(chracterTop > 130){
-                vx = -12;
+                vx = -24;
                 // this is for damage animation by using css then removing at after the timeout
                 player.style.animation ="playerBlinking 1.5s forwards";
                 setTimeout(function(){player.style.animation ="none";},1500)

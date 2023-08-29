@@ -1,5 +1,6 @@
-let x = parseInt((getComputedStyle(player).left));
-let y = parseInt((getComputedStyle(player).top));
+// player intial left and top
+let x = 150;
+let y = 200;
 
 let vx = 0;
 let vyu =0;
@@ -11,8 +12,8 @@ function update(){
     y += vyu;
     y += vyd;
     
-    player.style.top = y + "px"
     player.style.left = x + "px"
+    player.style.top = y + "px"
 
     vx = 0;
     requestAnimationFrame(update);
