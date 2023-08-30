@@ -100,6 +100,7 @@ overBtn.onclick = function(){
 
     x = 150;
     y = 200;
+    update();
 
     obstacles[0].style.left = "700px";
     
