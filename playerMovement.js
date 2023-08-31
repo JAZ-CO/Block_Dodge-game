@@ -12,11 +12,17 @@ function update(){
     y += vyu;
     y += vyd;
     
+    
     player.style.left = x + "px"
     player.style.top = y + "px"
+    
 
     vx = 0;
+    
+
+    
     requestAnimationFrame(update);
+    
 }
 update();
 
@@ -24,16 +30,25 @@ update();
 
 addEventListener("keydown",function(e){
     
+    
     if(e.code === "KeyW"){
+        if(parseInt(getComputedStyle(player).top) > 0){
         vyu = -1;
+        }
 
     }
     if(e.code === "KeyS"){
+        if(parseInt(getComputedStyle(player).top) < 405){
         vyd = 1;
+        }
 
     }
 
-})
+else{
+    return;
+}
+
+});
 
 addEventListener("keyup",function(e){
     
@@ -45,7 +60,7 @@ addEventListener("keyup",function(e){
         vyd = 0;
 
     }
-})
+});
 
 // Dash ability code
 // document.addEventListener("keydown", function(event){

@@ -98,6 +98,7 @@ overBtn.onclick = function(){
     // player.style.left = "150px";
     // player.style.top = "200px";
 
+    // reposition the player using update method;
     x = 150;
     y = 200;
     update();
