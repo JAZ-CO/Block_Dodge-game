@@ -19,6 +19,8 @@ class Bullet{
 
 }
 let bullet = new Bullet();
+let audio = document.getElementById("myAudio");
+audio.volume = 0.05;
 
 document.addEventListener("keypress", function(event){
     if(event.code === "Space" && !gameInIntro){
@@ -27,12 +29,12 @@ document.addEventListener("keypress", function(event){
              bullet.shoot = true;
             bullet.setPosition(parseInt( window.getComputedStyle(player).getPropertyValue("top")),parseInt( window.getComputedStyle(player).getPropertyValue("left")));
             bullet.bulletHTML.style.left = bullet.x + "px";
-
             bullet.bulletHTML.style.top = bullet.y + "px";
+
             wall.appendChild(bullet.bulletHTML);
 
             // audio for later
-            new Audio().play();
+            audio.play();
             
         setTimeout(function(){
             if(wall.contains(bullet.bulletHTML)){
