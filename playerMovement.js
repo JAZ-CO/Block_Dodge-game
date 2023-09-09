@@ -19,10 +19,15 @@ function update(){
 
     vx = 0;
     
+    // still working on limiting the player movement area:
+    if( y >= 0 && y <=407)
+        requestAnimationFrame(update);
+    else if (y < 0 && vyd >0)
+        requestAnimationFrame(update);
+    else if(y > 407 && vyu <0)
+        requestAnimationFrame(update);
+    
 
-    
-    requestAnimationFrame(update);
-    
 }
 update();
 
@@ -31,7 +36,7 @@ update();
 addEventListener("keydown",function(e){
     
     
-    if(e.code === "KeyW"){
+    if(e.code === "KeyW" ){
         if(parseInt(getComputedStyle(player).top) > 0){
         vyu = -1;
         }
@@ -44,9 +49,7 @@ addEventListener("keydown",function(e){
 
     }
 
-else{
-    return;
-}
+
 
 });
 
