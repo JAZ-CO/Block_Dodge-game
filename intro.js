@@ -18,7 +18,7 @@ let startBtn = document.getElementById("startBtn");
 
 let introLabel = document.createElement("p");
 
-introLabel.innerHTML = "Block Dodge";
+introLabel.innerHTML = "Block◧Dodge ";
 introLabel.setAttribute("style","font-family: 'Bungee Spice', cursive;")
 
 gameIntroId.appendChild(introLabel);
