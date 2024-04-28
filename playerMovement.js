@@ -41,7 +41,7 @@ addEventListener("keydown",function(e){
         vyu = -1;
         }
         else{
-            player.style.top = 0 + "px"
+            player.style.top = 1 + "px"
         }
 
     }
@@ -50,7 +50,7 @@ addEventListener("keydown",function(e){
         vyd = 1;
         }
         else{
-            player.style.top = 450 + "px"
+            player.style.top = 449 + "px"
         }
 
     }
