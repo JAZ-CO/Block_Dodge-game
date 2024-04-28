@@ -37,14 +37,20 @@ addEventListener("keydown",function(e){
     
     
     if(e.code === "KeyW" ){
-        if(parseInt(getComputedStyle(player).top) > 0){
+        if(parseInt(getComputedStyle(player).top) >= 0){
         vyu = -1;
+        }
+        else{
+            player.style.top = 0 + "px"
         }
 
     }
     if(e.code === "KeyS"){
-        if(parseInt(getComputedStyle(player).top) < 405){
+        if(parseInt(getComputedStyle(player).top) <= 405){
         vyd = 1;
+        }
+        else{
+            player.style.top = 450 + "px"
         }
 
     }
