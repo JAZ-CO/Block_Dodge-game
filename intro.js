@@ -7,7 +7,10 @@ let userNameInput = document.createElement("input");
 userNameInput.setAttribute("type","text");
 userNameInput.setAttribute("placeholder","Enter your name...");
 userNameInput.setAttribute("style","caret-color: cyan;");
-
+userNameInput.setAttribute("id","enterName");
+window.onload = function() {
+    document.getElementById('enterName').focus();
+  };
 userNameInput.addEventListener("keyup", e=>{
     e.preventDefault();
     if(e.keyCode === 13){
